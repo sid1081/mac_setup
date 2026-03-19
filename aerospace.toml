@@ -4,6 +4,11 @@
 # ── Start at login ────────────────────────────────────────────────────────────
 start-at-login = true
 
+# Notify SketchyBar when workspace changes
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
 # ── Gaps ──────────────────────────────────────────────────────────────────────
 [gaps]
 inner.horizontal = 8
