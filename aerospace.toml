@@ -53,33 +53,32 @@ alt-shift-q = 'close'
 alt-shift-r = 'reload-config'
 
 # Workspaces
-alt-1 = 'workspace term'
-alt-2 = 'workspace web'
-alt-3 = 'workspace comms'
-alt-4 = 'workspace notes'
-alt-5 = 'workspace code'
+alt-1 = 'workspace curr-project'
+alt-2 = 'workspace para'
+alt-3 = 'workspace content'
+alt-4 = 'workspace admin'
+alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
-alt-9 = 'workspace music'
+alt-9 = 'workspace 9'
 
 # Move window to workspace
-alt-shift-1 = 'move-node-to-workspace term'
-alt-shift-2 = 'move-node-to-workspace web'
-alt-shift-3 = 'move-node-to-workspace comms'
-alt-shift-4 = 'move-node-to-workspace notes'
-alt-shift-5 = 'move-node-to-workspace code'
+alt-shift-1 = 'move-node-to-workspace curr-project'
+alt-shift-2 = 'move-node-to-workspace para'
+alt-shift-3 = 'move-node-to-workspace content'
+alt-shift-4 = 'move-node-to-workspace admin'
+alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace music'
+alt-shift-9 = 'move-node-to-workspace 9'
 
 # Move window to workspace and follow
-alt-shift-ctrl-1 = ['move-node-to-workspace term',  'workspace term']
-alt-shift-ctrl-2 = ['move-node-to-workspace web',   'workspace web']
-alt-shift-ctrl-3 = ['move-node-to-workspace comms', 'workspace comms']
-alt-shift-ctrl-4 = ['move-node-to-workspace notes', 'workspace notes']
-alt-shift-ctrl-5 = ['move-node-to-workspace code',  'workspace code']
+alt-shift-ctrl-1 = ['move-node-to-workspace curr-project', 'workspace curr-project']
+alt-shift-ctrl-2 = ['move-node-to-workspace para',         'workspace para']
+alt-shift-ctrl-3 = ['move-node-to-workspace content',      'workspace content']
+alt-shift-ctrl-4 = ['move-node-to-workspace admin',        'workspace admin']
 
 # Cycle through workspaces
 alt-tab       = 'workspace-back-and-forth'
@@ -102,41 +101,13 @@ esc   = 'mode main'
 # ── App workspace assignments ─────────────────────────────────────────────────
 # Automatically send apps to specific workspaces
 [[on-window-detected]]
-if.app-id = 'com.apple.Terminal'
-run = 'move-node-to-workspace term'
-
-[[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
-run = 'move-node-to-workspace term'
-
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace term'
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace web'
-
-[[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
-run = 'move-node-to-workspace web'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace web'
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace content'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace comms'
+run = 'move-node-to-workspace admin'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = 'move-node-to-workspace comms'
-
-[[on-window-detected]]
-if.app-id = 'notion.id'
-run = 'move-node-to-workspace notes'
-
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace music'
+run = 'move-node-to-workspace admin'
