@@ -31,9 +31,9 @@ alt-shift-j = 'move down'
 # Resize (hold alt-r to enter resize mode)
 alt-r = 'mode resize'
 
-# Split direction
-alt-v = 'split horizontal'
-alt-s = 'split vertical'
+# Join windows into a container (preferred over 'split' with normalizations on)
+alt-v = 'join-with right'
+alt-s = 'join-with down'
 
 # Layouts
 alt-f        = 'layout floating tiling'   # toggle float
