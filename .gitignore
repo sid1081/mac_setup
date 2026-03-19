@@ -1,0 +1,9 @@
+# Neovim
+nvim/lazy-lock.json
+nvim/.cache/
+
+# OS
+.DS_Store
+
+# Secrets / local state
+nvim/lua/configs/secrets.lua
