@@ -1,6 +1,6 @@
 # mac_setup
 
-My macOS developer setup — Neovim + SketchyBar — installable with one command.
+My macOS developer setup — Neovim + SketchyBar + AeroSpace — installable with one command.
 
 ## Install
 
@@ -11,11 +11,11 @@ git clone https://github.com/siddharthsambharia-portkey/mac_setup.git ~/mac_setu
 That's it. The script will:
 
 1. Install **Homebrew** if missing
-2. Install all **brew packages** (Neovim, SketchyBar, fonts, tools) via `Brewfile`
-3. **Symlink** `nvim/` → `~/.config/nvim` and `sketchybar/` → `~/.config/sketchybar`
+2. Install all **brew packages** (Neovim, SketchyBar, AeroSpace, fonts, tools) via `Brewfile`
+3. **Symlink** configs → `~/.config/nvim`, `~/.config/sketchybar`, `~/.aerospace.toml`
 4. Copy **DankMono** fonts to `~/Library/Fonts/`
 5. Install all **Neovim plugins** headlessly via lazy.nvim
-6. **Restart SketchyBar**
+6. **Restart SketchyBar** and launch AeroSpace
 
 ## What's included
 
@@ -29,7 +29,21 @@ That's it. The script will:
 ### SketchyBar (`sketchybar/`)
 
 - Transparent/frosted bar with adaptive laptop/desktop layout (detects built-in vs external display)
-- Shows: workspace, active app, weather, clock, battery, volume, YouTube Music / Spotify
+- Shows: macOS space, AeroSpace workspace, active app, weather, clock, battery, volume, YouTube Music / Spotify
+- AeroSpace workspace widget updates in real time when switching workspaces (`⎇ 1`)
+
+### AeroSpace (`aerospace.toml`)
+
+- Tiling window manager, starts at login
+- **Focus:** `Alt + h/j/k/l`
+- **Move window:** `Alt + Shift + h/j/k/l`
+- **Resize mode:** `Alt + r`, then `h/j/k/l` (`Shift` for larger steps), `Esc` to exit
+- **Join windows:** `Alt + v` (join right) / `Alt + s` (join down)
+- **Toggle float:** `Alt + f` | **Fullscreen:** `Alt + Shift + f`
+- **Workspaces:** `Alt + 1-9` to switch, `Alt + Shift + 1-9` to send window there
+- **Back and forth:** `Alt + Tab`
+- **Reload config:** `Alt + Shift + r`
+- Auto-assigns apps to workspaces: terminal→1, browser→2, Slack/Mail→3, Notion→4, Spotify→9
 
 ### Fonts (`fonts/`)
 
