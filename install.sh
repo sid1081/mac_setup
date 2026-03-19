@@ -59,10 +59,20 @@ if command -v playwright &>/dev/null; then
   playwright install chromium
 fi
 
-# ── 6. SketchyBar ─────────────────────────────────────────────────────────────
+# ── 6. AeroSpace ─────────────────────────────────────────────────────────────
+echo "==> Symlinking AeroSpace config..."
+if [ -e ~/.aerospace.toml ] && [ ! -L ~/.aerospace.toml ]; then
+  echo "    Backing up existing ~/.aerospace.toml to ~/.aerospace.toml.bak"
+  mv ~/.aerospace.toml ~/.aerospace.toml.bak
+fi
+ln -sf "$DOTFILES_DIR/aerospace.toml" ~/.aerospace.toml
+echo "    ~/.aerospace.toml -> $DOTFILES_DIR/aerospace.toml"
+
+# ── 7. SketchyBar ─────────────────────────────────────────────────────────────
 echo "==> Starting SketchyBar..."
 brew services restart sketchybar
 
 echo ""
 echo "✅ Done! Open a new terminal window and launch nvim."
+echo "   Launch AeroSpace from Applications or run: open -a AeroSpace"
 echo "   If fonts look wrong, log out and back in to refresh font cache."

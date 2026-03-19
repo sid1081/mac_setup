@@ -20,6 +20,9 @@ brew "neovim"
 # SketchyBar
 brew "FelixKratz/formulae/sketchybar"
 
+# AeroSpace window manager
+cask "nikitabobko/tap/aerospace"
+
 # Nerd Fonts
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
