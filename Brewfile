@@ -17,6 +17,9 @@ brew "tree-sitter"
 # Neovim
 brew "neovim"
 
+# Superfile (terminal file manager)
+brew "superfile"
+
 # SketchyBar
 brew "FelixKratz/formulae/sketchybar"
 

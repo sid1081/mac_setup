@@ -59,7 +59,20 @@ if command -v playwright &>/dev/null; then
   playwright install chromium
 fi
 
-# ── 6. AeroSpace ─────────────────────────────────────────────────────────────
+# ── 6. Superfile ─────────────────────────────────────────────────────────────
+echo "==> Symlinking Superfile config..."
+SPF_CONFIG_DIR="$HOME/Library/Application Support/superfile"
+mkdir -p "$SPF_CONFIG_DIR"
+for f in config.toml hotkeys.toml; do
+  if [ -e "$SPF_CONFIG_DIR/$f" ] && [ ! -L "$SPF_CONFIG_DIR/$f" ]; then
+    echo "    Backing up existing $f to $f.bak"
+    mv "$SPF_CONFIG_DIR/$f" "$SPF_CONFIG_DIR/$f.bak"
+  fi
+  ln -sf "$DOTFILES_DIR/superfile/$f" "$SPF_CONFIG_DIR/$f"
+  echo "    $SPF_CONFIG_DIR/$f -> $DOTFILES_DIR/superfile/$f"
+done
+
+# ── 7. AeroSpace ─────────────────────────────────────────────────────────────
 echo "==> Symlinking AeroSpace config..."
 if [ -e ~/.aerospace.toml ] && [ ! -L ~/.aerospace.toml ]; then
   echo "    Backing up existing ~/.aerospace.toml to ~/.aerospace.toml.bak"
@@ -68,7 +81,7 @@ fi
 ln -sf "$DOTFILES_DIR/aerospace.toml" ~/.aerospace.toml
 echo "    ~/.aerospace.toml -> $DOTFILES_DIR/aerospace.toml"
 
-# ── 7. SketchyBar ─────────────────────────────────────────────────────────────
+# ── 8. SketchyBar ─────────────────────────────────────────────────────────────
 echo "==> Starting SketchyBar..."
 brew services restart sketchybar
 

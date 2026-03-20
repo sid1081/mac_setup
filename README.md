@@ -1,6 +1,6 @@
 # mac_setup
 
-My macOS developer setup — Neovim + SketchyBar + AeroSpace — installable with one command.
+My macOS developer setup — Neovim + SketchyBar + AeroSpace + Superfile — installable with one command.
 
 ## Install
 
@@ -12,7 +12,7 @@ That's it. The script will:
 
 1. Install **Homebrew** if missing
 2. Install all **brew packages** (Neovim, SketchyBar, AeroSpace, fonts, tools) via `Brewfile`
-3. **Symlink** configs → `~/.config/nvim`, `~/.config/sketchybar`, `~/.aerospace.toml`
+3. **Symlink** configs → `~/.config/nvim`, `~/.config/sketchybar`, `~/.aerospace.toml`, `~/Library/Application Support/superfile/`
 4. Copy **DankMono** fonts to `~/Library/Fonts/`
 5. Install all **Neovim plugins** headlessly via lazy.nvim
 6. **Restart SketchyBar** and launch AeroSpace
@@ -44,6 +44,16 @@ That's it. The script will:
 - **Back and forth:** `Alt + Tab`
 - **Reload config:** `Alt + Shift + r`
 - Auto-assigns apps to workspaces: terminal→1, browser→2, Slack/Mail→3, Notion→4, Spotify→9
+
+### Superfile (`superfile/`)
+
+- Terminal file manager — launch with `spf`
+- **Theme:** catppuccin-mocha with Nerd Fonts icons
+- **Navigation:** vim-style (`h/j/k/l`), `/` to search, `.` to toggle dotfiles
+- **File ops:** `ctrl+c/x/v` copy/cut/paste, `ctrl+n` create, `ctrl+r` rename, `D` permanent delete
+- **Panels:** `n` new panel, `w` close panel, `Tab`/`Shift+Left` cycle panels
+- **Preview:** `f` toggle file preview, `e` open in editor, `E` open directory in editor
+- **Extras:** file preview on hover, image preview, zoxide integration (`z`)
 
 ### Fonts (`fonts/`)
 
