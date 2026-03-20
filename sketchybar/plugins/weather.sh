@@ -16,10 +16,10 @@ if [ -z $WEATHER_JSON ]; then
   return
 fi
 
-TEMPERATURE=$(echo $WEATHER_JSON | jq '.data.current_condition[0].temp_C' | tr -d '"')
-WEATHER_DESCRIPTION=$(echo $WEATHER_JSON | jq '.data.current_condition[0].weatherDesc[0].value' | tr -d '"')
-RAIN=$(echo $WEATHER_JSON | jq '[.data.weather[0].hourly[].chanceofrain | tonumber] | max | floor')
-SNOW=$(echo $WEATHER_JSON | jq '[.data.weather[0].hourly[].chanceofsnow | tonumber] | max | floor')
+TEMPERATURE=$(echo $WEATHER_JSON | jq '.current_condition[0].temp_C' | tr -d '"')
+WEATHER_DESCRIPTION=$(echo $WEATHER_JSON | jq '.current_condition[0].weatherDesc[0].value' | tr -d '"')
+RAIN=$(echo $WEATHER_JSON | jq '[.weather[0].hourly[].chanceofrain | tonumber] | max | floor')
+SNOW=$(echo $WEATHER_JSON | jq '[.weather[0].hourly[].chanceofsnow | tonumber] | max | floor')
 
 LABEL="$LOCATION • ${TEMPERATURE}℃ • $WEATHER_DESCRIPTION"
 

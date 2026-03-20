@@ -57,7 +57,7 @@ alt-1 = 'workspace curr-project'
 alt-2 = 'workspace para'
 alt-3 = 'workspace content'
 alt-4 = 'workspace admin'
-alt-5 = 'workspace 5'
+alt-5 = 'workspace comms'
 alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
@@ -68,7 +68,7 @@ alt-shift-1 = 'move-node-to-workspace curr-project'
 alt-shift-2 = 'move-node-to-workspace para'
 alt-shift-3 = 'move-node-to-workspace content'
 alt-shift-4 = 'move-node-to-workspace admin'
-alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-5 = 'move-node-to-workspace comms'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
@@ -79,6 +79,7 @@ alt-shift-ctrl-1 = ['move-node-to-workspace curr-project', 'workspace curr-proje
 alt-shift-ctrl-2 = ['move-node-to-workspace para',         'workspace para']
 alt-shift-ctrl-3 = ['move-node-to-workspace content',      'workspace content']
 alt-shift-ctrl-4 = ['move-node-to-workspace admin',        'workspace admin']
+alt-shift-ctrl-5 = ['move-node-to-workspace comms',        'workspace comms']
 
 # Cycle through workspaces
 alt-tab       = 'workspace-back-and-forth'
@@ -100,6 +101,14 @@ esc   = 'mode main'
 
 # ── App workspace assignments ─────────────────────────────────────────────────
 # Automatically send apps to specific workspaces
+[[on-window-detected]]
+if.workspace = 'comms'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.workspace = 'admin'
+run = 'layout floating'
+
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace content'
