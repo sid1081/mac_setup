@@ -12,6 +12,10 @@ vim.opt.spell = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Spacing / padding
+vim.opt.scrolloff = 10       -- keep 10 lines visible above/below cursor
+vim.opt.sidescrolloff = 8    -- keep 8 columns visible left/right of cursor
+
 -- Auto-open nvim-tree on startup
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
