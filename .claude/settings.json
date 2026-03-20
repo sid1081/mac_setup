@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /Users/siddharth/para/personal-projects/mac_setup && git diff --quiet && git diff --cached --quiet && [ -z \"$(git ls-files --others --exclude-standard)\" ] || (git add -A && git commit -m 'chore: sync mac setup configs' && git push)",
+            "command": "cd /Users/siddharth/para/personal-projects/mac-setup && git diff --quiet && git diff --cached --quiet && [ -z \"$(git ls-files --others --exclude-standard)\" ] || (git add -A && git commit -m 'chore: sync mac setup configs' && git push)",
             "timeout": 30,
             "statusMessage": "Syncing mac setup to remote..."
           }

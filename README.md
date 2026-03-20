@@ -5,7 +5,7 @@ My macOS developer setup — Neovim + SketchyBar + AeroSpace + Superfile — ins
 ## Install
 
 ```bash
-git clone https://github.com/siddharthsambharia-portkey/mac_setup.git ~/mac_setup && cd ~/mac_setup && chmod +x install.sh && ./install.sh
+git clone https://github.com/sid1081/mac-setup.git ~/mac-setup && cd ~/mac-setup && chmod +x install.sh && ./install.sh
 ```
 
 That's it. The script will:
